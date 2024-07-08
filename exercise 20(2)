@@ -1,0 +1,5 @@
+Select maker, count(model) AS count_mod 
+From Product
+Where type = 'PC'
+Group by maker
+Having count(model) >= 3 
