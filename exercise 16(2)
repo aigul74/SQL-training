@@ -1,0 +1,4 @@
+select distinct PC.model, pc2.model, PC.speed, PC.ram  
+from PC 
+INNER JOIN PC as pc2 ON  pc2.speed = PC.speed 
+AND pc2.ram=PC.ram AND PC.model != pc2.model AND PC.model > pc2.model
