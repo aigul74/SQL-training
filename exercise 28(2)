@@ -1,0 +1,10 @@
+SELECT COUNT(*)
+FROM (
+    SELECT maker
+    FROM Product
+    GROUP BY maker
+    HAVING COUNT(*) = 1
+) AS SingleProductMakers;
+
+Используя таблицу Product, определить количество производителей, выпускающих по одной модели.
+Using the Product table, determine the number of manufacturers producing one model.
