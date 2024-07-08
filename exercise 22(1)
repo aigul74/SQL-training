@@ -1,0 +1,7 @@
+SELECT speed, AVG(price) AS avg_price From PC
+WHERE speed > 600
+Group by speed
+
+--Для каждого значения скорости ПК, превышающего 600 МГц, определите среднюю цену ПК с такой же скоростью. Вывести: speed, средняя цена.
+
+
