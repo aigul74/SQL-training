@@ -1,0 +1,6 @@
+SELECT distinct maker FROM Product
+INNER JOIN PC ON PC.model = Product.model AND PC.speed >= 750 AND maker IN(SELECT maker FROM Product, Laptop
+WHERE Laptop.model = Product.model AND Laptop.speed >= 750)
+--Найдите производителей, которые производили бы как ПК
+--со скоростью не менее 750 МГц, так и ПК-блокноты со скоростью не менее 750 МГц.
+--Вывести: Maker
